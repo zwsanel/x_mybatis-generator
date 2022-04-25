@@ -6,8 +6,7 @@ mybatis生成xml,entity,mapper工具类，增加了DDL校验（注释校验，�
 引用druid(1.2.6)sql解析器和mybatis-generator(1.3.6) 
 
 
-入口类
-public class GeneratorApplication {
+方法入口
     public static void main(String[] args) throws IOException, XMLParserException, InvalidConfigurationException, SQLException, InterruptedException {
         String path = Objects.requireNonNull(
                 GeneratorApplication.class.getClassLoader().getResource("generationConfig.xml")
@@ -19,11 +18,10 @@ public class GeneratorApplication {
         Configuration config = cp.parseConfiguration(configFile);
         DefaultShellCallback callback = new DefaultShellCallback(true);
         MyBatisGenerator myBatisGenerator = new MyBatisGenerator(config, callback, warnings);
-        // 校验ddl
+        // myBatisGenerator.generate(new NullProgressCallback());
+        // DDL校验回调
         myBatisGenerator.generate(getDDLValidateCallback());
     }
-    ...
-}
 
 结构说明
 
