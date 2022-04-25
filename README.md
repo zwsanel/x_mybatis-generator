@@ -7,11 +7,11 @@ mybatis生成xml,entity,mapper工具类，增加了DDL校验（注释校验，�
 
 
 方法入口
+
     public static void main(String[] args) throws IOException, XMLParserException, InvalidConfigurationException, SQLException, InterruptedException {
         String path = Objects.requireNonNull(
                 GeneratorApplication.class.getClassLoader().getResource("generationConfig.xml")
         ).getPath();
-
         List<String> warnings = new ArrayList<String>();
         File configFile = new File(path);
         ConfigurationParser cp = new ConfigurationParser(warnings);
