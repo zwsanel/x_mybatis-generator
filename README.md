@@ -1,5 +1,5 @@
 # x_mybatis-generator
-mybatis生成xml,entity,mapper工具类，增加了DDL规则校验（注释校验，字段校验，索引校验），自动生成注释，实现Lombok注解，继承父类，生成serialVersionUID，可基于源码自行修改。
+mybatis生成xml,entity,mapper工具，增加了DDL规则校验（注释校验，字段校验，索引校验），自动生成注释，实现Lombok注解，继承父类，生成serialVersionUID，可基于源码进行自定义修改。
 
 对ddl创建作出一些基本规范约束，方便团队管理。
 
